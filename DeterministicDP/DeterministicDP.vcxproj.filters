@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ddp_brachistochrone.cpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DDP">
+      <UniqueIdentifier>{14d825b8-cde3-4d7f-8e71-3745647c60e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDP\example_ddp">
+      <UniqueIdentifier>{517d111e-ae0b-49c9-8b8e-ea37196ccb67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDP\example_ddp\brachistochrone">
+      <UniqueIdentifier>{647f1281-9ad5-407e-a5e8-db4834ffeafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDP\graph_ddp_solver">
+      <UniqueIdentifier>{e66a1716-98ce-4bf2-8364-d4c42ec4c5f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DDP\state_ddp_solver">
+      <UniqueIdentifier>{fa194a8d-bcdb-403d-ae77-81d6e601c81b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ddp_solver.hpp">
+      <Filter>DDP\state_ddp_solver</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_brachistochrone.hpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClInclude>
+    <ClInclude Include="dpp_solver_impl.hpp">
+      <Filter>DDP\state_ddp_solver</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
