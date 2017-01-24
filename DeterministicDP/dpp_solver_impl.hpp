@@ -55,13 +55,13 @@ namespace ddp {
 				for (int k = 0; k < Ns; ++k) { // loop through states
 					for (int j = 0; j < Nc; ++j) { // loop through controls
 
-						if (k == Ns - 1 && j == 0) {
+						/*if (k == Ns - 1 && j == 0) {
 							int i = 0;
-						}
+						}*/
 						// get index of next state using state k and control j
 						xn_idx = ddp_.getNextState(k,j);
-						double y1_ = ddp_.getYStateAtNetIdx(xn_idx);
-						double s1_ = ddp_.getSStateAtNetIdx(xn_idx);
+						//double y1_ = ddp_.getYStateAtNetIdx(xn_idx);
+						//double s1_ = ddp_.getSStateAtNetIdx(xn_idx);
 
 
 						// compute local cost in time due to state k and control j
@@ -77,8 +77,8 @@ namespace ddp {
 
 					// set the cost-to-go to found best cost
 					//(*v1)[k] = best_cost;
-					double y_ = ddp_.getYStateAtNetIdx(k);
-					double s_ = ddp_.getSStateAtNetIdx(k);
+					//double y_ = ddp_.getYStateAtNetIdx(k);
+					//double s_ = ddp_.getSStateAtNetIdx(k);
 					V[i][k] = best_cost;
 
 

@@ -5,6 +5,9 @@
     <ClCompile Include="ddp_brachistochrone.cpp">
       <Filter>DDP\example_ddp\brachistochrone</Filter>
     </ClCompile>
+    <ClCompile Include="ddp_control1d.cpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DDP">
@@ -22,6 +25,9 @@
     <Filter Include="DDP\state_ddp_solver">
       <UniqueIdentifier>{fa194a8d-bcdb-403d-ae77-81d6e601c81b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDP\example_ddp\control_1d">
+      <UniqueIdentifier>{e9fc4631-d44a-43f4-94e6-4ba6ed8db2d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddp_solver.hpp">
@@ -32,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="dpp_solver_impl.hpp">
       <Filter>DDP\state_ddp_solver</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_control1d.hpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
