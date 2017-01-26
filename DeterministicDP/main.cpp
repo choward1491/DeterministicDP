@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
 	}
 	*/
 
-	int N = 80, Ns1 = 200, Ns2 = 200, Nc = 13;
+	int N = 80, Ns1 = 200, Ns2 = 200, Nc = 3;
 	double Q = 10.0, Qf = 100, R = 0;
 	p_ddp pddp;
 	pddp.setNumIterations(N);
@@ -85,7 +85,7 @@ int main(int argc, char** argv) {
 	p_ddp::Policy & policy = pddp.getPolicy();
 	p_ddp::CostGraph & cg  = pddp.getCostGraph();
 
-	int si_1 = ddp_.getStateIdx(0,0);
+	int si_1 = ddp_.getStateIdx(3.1415/2.0,0);
 	int si_2 = ddp_.getStateIdx(0, 1);
 	int s_idx = ddp_.getNetIdx(si_1, si_2);
 	printf("theta = %lf\n", ddp_.getStateAtNetIdx(s_idx).theta*180/3.1415);
