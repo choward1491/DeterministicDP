@@ -21,13 +21,13 @@ namespace ddp {
 		int idx1 = 0, idx2 = 0;
 		getIndicies(state_idx, idx1, idx2);
 		struct state s = { t[idx1],td[idx2] };
-		double dtheta = s.theta - M_PI;
+		double dtheta = fabs(s.theta) - M_PI;
 		return Qf*dtheta*dtheta + s.thetadot*s.thetadot ;
 	}
 
 	int pendulum::getNextState(int state_idx, int control_idx)
 	{
-		double k = 1, c = 0;
+		double k = 5, c = 0;
 		int idx1 = 0, idx2 = 0;
 		getIndicies(state_idx, idx1, idx2);
 		struct state s = { t[idx1],td[idx2] };
@@ -50,8 +50,8 @@ namespace ddp {
 		getIndicies(state_idx, idx1, idx2);
 		struct state s = { t[idx1],td[idx2] };
 		const double & u = control[control_idx];
-
-		return R*u*u;
+		double dtheta = fabs(s.theta) - M_PI;
+		return R*u*u + Q*dtheta*dtheta;
 	}
 
 	int pendulum::numControls()

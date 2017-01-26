@@ -70,8 +70,8 @@ int main(int argc, char** argv) {
 	}
 	*/
 
-	int N = 100, Ns1 = 100, Ns2 = 100, Nc = 11;
-	double Q = 0, Qf = 100, R = 0;
+	int N = 80, Ns1 = 200, Ns2 = 200, Nc = 13;
+	double Q = 10.0, Qf = 100, R = 0;
 	p_ddp pddp;
 	pddp.setNumIterations(N);
 	p_ddp::DDP & ddp_ = pddp.ddp();
@@ -89,14 +89,12 @@ int main(int argc, char** argv) {
 	int si_2 = ddp_.getStateIdx(0, 1);
 	int s_idx = ddp_.getNetIdx(si_1, si_2);
 	printf("theta = %lf\n", ddp_.getStateAtNetIdx(s_idx).theta*180/3.1415);
-	for (int i = 0; i < 16 /*(N - 1)*/; ++i) {
-		int c_idx = policy[i][s_idx];
+	for (int i = 0; i < (N - 1); ++i) {
+		int c_idx = policy[0][s_idx];
 		double u = ddp_.getControlAt(c_idx);
 		s_idx = ddp_.getNextState(s_idx, c_idx);
 		ddp::pendulum::state s = ddp_.getStateAtNetIdx(s_idx);
 		printf("theta = %4.3lf, theta_dot = %4.3lf, u = %4.3lf\n", s.theta * 180 / 3.1415, s.thetadot, u);
 	}
-
-
 	return 0;
 }
