@@ -112,11 +112,13 @@
   <ItemGroup>
     <ClCompile Include="ddp_brachistochrone.cpp" />
     <ClCompile Include="ddp_control1d.cpp" />
+    <ClCompile Include="ddp_pendulum.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddp_brachistochrone.hpp" />
     <ClInclude Include="ddp_control1d.hpp" />
+    <ClInclude Include="ddp_pendulum.hpp" />
     <ClInclude Include="ddp_solver.hpp" />
     <ClInclude Include="dpp_solver_impl.hpp" />
   </ItemGroup>

@@ -53,45 +53,27 @@ namespace ddp {
 			// compute V and control for i = 1 to N-1
 			for (int i = (N - 1) - 1; i >= 0; --i) {
 				for (int k = 0; k < Ns; ++k) { // loop through states
+
+					V[i][k] = 1e100; // reset cost for use in next state
 					for (int j = 0; j < Nc; ++j) { // loop through controls
 
-						/*if (k == Ns - 1 && j == 0) {
-							int i = 0;
-						}*/
-						// get index of next state using state k and control j
-						xn_idx = ddp_.getNextState(k,j);
-						//double y1_ = ddp_.getYStateAtNetIdx(xn_idx);
-						//double s1_ = ddp_.getSStateAtNetIdx(xn_idx);
-
-
 						// compute local cost in time due to state k and control j
-						local_cost = ddp_.cost(i, N, k, j) 
-									+ V[i + 1][xn_idx];/*(*v2)[xn_idx];*/
+						xn_idx = ddp_.getNextState(k, j);
+						double Vn = V[i + 1][xn_idx];
+						double gi = ddp_.cost(i, N, k, j);
+						local_cost = gi + Vn; /*(*v2)[xn_idx];*/
 
 						// update the best cost if needed
-						if (local_cost < best_cost) {
-							best_cost = local_cost;
+						if (local_cost < V[i][k]) {
+							V[i][k] = local_cost; //(*v1)[k]
 							policy[i][k] = j;
 						}
 					}// end control loop
 
-					// set the cost-to-go to found best cost
-					//(*v1)[k] = best_cost;
-					//double y_ = ddp_.getYStateAtNetIdx(k);
-					//double s_ = ddp_.getSStateAtNetIdx(k);
-					V[i][k] = best_cost;
-
-
-					// reset best cost for use in next state
-					best_cost = 1e100;
 				}// end state loop
 
 				// update cost references
-				/*
-				tmp = v2;
-				v2 = v1;
-				v1 = tmp;
-				*/
+				/* tmp = v2; v2 = v1; v1 = tmp; */
 
 			}// end time loop
 		}

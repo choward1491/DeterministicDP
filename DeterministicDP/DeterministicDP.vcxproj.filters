@@ -8,6 +8,9 @@
     <ClCompile Include="ddp_control1d.cpp">
       <Filter>DDP\example_ddp\control_1d</Filter>
     </ClCompile>
+    <ClCompile Include="ddp_pendulum.cpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DDP">
@@ -28,6 +31,9 @@
     <Filter Include="DDP\example_ddp\control_1d">
       <UniqueIdentifier>{e9fc4631-d44a-43f4-94e6-4ba6ed8db2d6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDP\example_ddp\pendulum_control">
+      <UniqueIdentifier>{9dfecca2-7b66-4790-b456-4bece1d22883}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddp_solver.hpp">
@@ -41,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="ddp_control1d.hpp">
       <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_pendulum.hpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

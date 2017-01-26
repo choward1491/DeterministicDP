@@ -29,7 +29,7 @@ namespace ddp {
 
 	private:
 		int num_pts, Ns, Ns2, Nc;
-		std::vector<double> y, s, state;
+		std::vector<double> y, s;
 		double p1[2], p2[2];
 		double dx;
 

@@ -5,9 +5,11 @@
 #include "ddp_solver.hpp"
 #include "ddp_brachistochrone.hpp"
 #include "ddp_control1d.hpp"
+#include "ddp_pendulum.hpp"
 
 typedef ddp::solver<ddp::brachistochrone> brach_ddp;
 typedef ddp::solver<ddp::control1d> c1d_ddp;
+typedef ddp::solver<ddp::pendulum> p_ddp;
 
 int main(int argc, char** argv) {
 
@@ -44,6 +46,7 @@ int main(int argc, char** argv) {
 	brach_ddp::CostGraph & cg = bddp.getCostGraph();
 	*/
 
+	/*
 	int N = 100, Ns = 101, Nc = 21;
 	c1d_ddp cddp;
 	cddp.setNumIterations(N);
@@ -64,6 +67,34 @@ int main(int argc, char** argv) {
 	for (int i = 0; i < (N - 1); ++i) {
 		s_idx = ddp_.getNextState(s_idx, policy[i][s_idx]);
 		printf("%lf\n", ddp_.getStateAt(s_idx));
+	}
+	*/
+
+	int N = 100, Ns1 = 100, Ns2 = 100, Nc = 11;
+	double Q = 0, Qf = 100, R = 0;
+	p_ddp pddp;
+	pddp.setNumIterations(N);
+	p_ddp::DDP & ddp_ = pddp.ddp();
+	ddp_.setDt(1e-1);
+	ddp_.setCostFuncVars(Q, Qf, R);
+	ddp_.setAngleRange(-3.1415, 3.1415, Ns1);
+	ddp_.setAngVelRange(-3*3.1415, 3*3.1415, Ns2);
+	ddp_.setControlRange(-1, 1, Nc);
+
+	pddp.solve();
+	p_ddp::Policy & policy = pddp.getPolicy();
+	p_ddp::CostGraph & cg  = pddp.getCostGraph();
+
+	int si_1 = ddp_.getStateIdx(0,0);
+	int si_2 = ddp_.getStateIdx(0, 1);
+	int s_idx = ddp_.getNetIdx(si_1, si_2);
+	printf("theta = %lf\n", ddp_.getStateAtNetIdx(s_idx).theta*180/3.1415);
+	for (int i = 0; i < 16 /*(N - 1)*/; ++i) {
+		int c_idx = policy[i][s_idx];
+		double u = ddp_.getControlAt(c_idx);
+		s_idx = ddp_.getNextState(s_idx, c_idx);
+		ddp::pendulum::state s = ddp_.getStateAtNetIdx(s_idx);
+		printf("theta = %4.3lf, theta_dot = %4.3lf, u = %4.3lf\n", s.theta * 180 / 3.1415, s.thetadot, u);
 	}
 
 
