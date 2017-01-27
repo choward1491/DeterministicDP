@@ -23,8 +23,8 @@ namespace ddp {
 	class solver {
 	public:
 
-		typedef std::vector<std::vector<int>> Policy;
-		typedef std::vector<std::vector<double>> CostGraph;
+		typedef std::vector<std::vector<char>> Policy;
+		typedef std::vector<std::vector<float>> CostGraph;
 		typedef ddp_def DDP;
 		solver();
 		ddp_def & ddp();
@@ -38,6 +38,7 @@ namespace ddp {
 		int num_cost_iters;
 		ddp_def ddp_;
 		CostGraph V;
+		std::vector<float> V1, V2;
 
 		Policy policy;
 

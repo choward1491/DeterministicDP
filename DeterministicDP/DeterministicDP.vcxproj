@@ -90,6 +90,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -111,15 +112,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ddp_brachistochrone.cpp" />
+    <ClCompile Include="ddp_brachistochrone_test.cpp" />
     <ClCompile Include="ddp_control1d.cpp" />
+    <ClCompile Include="ddp_control1d_test.cpp" />
     <ClCompile Include="ddp_pendulum.cpp" />
+    <ClCompile Include="ddp_pendulum_test.cpp" />
+    <ClCompile Include="double_invert_pendulum.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddp_brachistochrone.hpp" />
+    <ClInclude Include="ddp_brachistochrone_test.hpp" />
     <ClInclude Include="ddp_control1d.hpp" />
+    <ClInclude Include="ddp_control1d_test.hpp" />
     <ClInclude Include="ddp_pendulum.hpp" />
+    <ClInclude Include="ddp_pendulum_test.hpp" />
     <ClInclude Include="ddp_solver.hpp" />
+    <ClInclude Include="double_invert_pendulum.hpp" />
     <ClInclude Include="dpp_solver_impl.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

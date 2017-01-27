@@ -11,6 +11,18 @@
     <ClCompile Include="ddp_pendulum.cpp">
       <Filter>DDP\example_ddp\pendulum_control</Filter>
     </ClCompile>
+    <ClCompile Include="ddp_pendulum_test.cpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClCompile>
+    <ClCompile Include="ddp_control1d_test.cpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClCompile>
+    <ClCompile Include="ddp_brachistochrone_test.cpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClCompile>
+    <ClCompile Include="double_invert_pendulum.cpp">
+      <Filter>DDP\example_ddp\doubleInvertPendulum</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DDP">
@@ -34,6 +46,9 @@
     <Filter Include="DDP\example_ddp\pendulum_control">
       <UniqueIdentifier>{9dfecca2-7b66-4790-b456-4bece1d22883}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDP\example_ddp\doubleInvertPendulum">
+      <UniqueIdentifier>{7356ad6e-0207-4814-9c9e-9e7735151ecb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ddp_solver.hpp">
@@ -50,6 +65,18 @@
     </ClInclude>
     <ClInclude Include="ddp_pendulum.hpp">
       <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_pendulum_test.hpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_control1d_test.hpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClInclude>
+    <ClInclude Include="ddp_brachistochrone_test.hpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClInclude>
+    <ClInclude Include="double_invert_pendulum.hpp">
+      <Filter>DDP\example_ddp\doubleInvertPendulum</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

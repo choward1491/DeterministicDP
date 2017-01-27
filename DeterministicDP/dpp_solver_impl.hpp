@@ -43,29 +43,33 @@ namespace ddp {
 			int xn_idx = 0;
 			double local_cost = 0.0;
 			double best_cost = 1e100;
-			//std::vector<double> *v1 = &V, *v2 = &Vn, *tmp = &V;
+			std::vector<float> *v1 = &V1, *v2 = &V2, *tmp = &V1;
 
 			// compute final condition
 			for (int i = 0; i < Ns; ++i) {
-				V[N-1][i] = ddp_.finalCost(i);
+				//V[N-1][i] = ddp_.finalCost(i);
+				(*v2)[i] = ddp_.finalCost(i);
 			}
 
 			// compute V and control for i = 1 to N-1
 			for (int i = (N - 1) - 1; i >= 0; --i) {
 				for (int k = 0; k < Ns; ++k) { // loop through states
 
-					V[i][k] = 1e100; // reset cost for use in next state
+					//V[i][k] = 1e100; // reset cost for use in next state
+					(*v1)[k] = 1e100;
 					for (int j = 0; j < Nc; ++j) { // loop through controls
 
 						// compute local cost in time due to state k and control j
 						xn_idx = ddp_.getNextState(k, j);
-						double Vn = V[i + 1][xn_idx];
+						//double Vn = V[i + 1][xn_idx];
+						double Vn = (*v2)[xn_idx];
 						double gi = ddp_.cost(i, N, k, j);
-						local_cost = gi + Vn; /*(*v2)[xn_idx];*/
+						local_cost = gi + Vn; 
 
 						// update the best cost if needed
-						if (local_cost < V[i][k]) {
-							V[i][k] = local_cost; //(*v1)[k]
+						if (local_cost < (*v1)[k]) {
+							//V[i][k] = local_cost;
+							(*v1)[k] = local_cost;
 							policy[i][k] = j;
 						}
 					}// end control loop
@@ -73,8 +77,8 @@ namespace ddp {
 				}// end state loop
 
 				// update cost references
-				/* tmp = v2; v2 = v1; v1 = tmp; */
-
+				tmp = v2; v2 = v1; v1 = tmp;
+				printf("Step (%i) Complete\n",i);
 			}// end time loop
 		}
 
@@ -108,10 +112,15 @@ namespace ddp {
 		const int N = num_cost_iters;
 		const int Ns = ddp_.numStates();
 
+		
+		if (V1.size() != Ns) { V1.resize(Ns); }
+		if (V2.size() != Ns) { V2.resize(Ns); }
+		/*
 		if (V.size() != N) { V.resize(N); }
 		for (int i = 0; i < N; ++i) {
 			if (V[i].size() != Ns) { V[i].resize(Ns); }
 		}
+		*/
 
 	}
 
