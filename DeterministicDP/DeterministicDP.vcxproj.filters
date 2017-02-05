@@ -1,30 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ddp_brachistochrone.cpp">
-      <Filter>DDP\example_ddp\brachistochrone</Filter>
-    </ClCompile>
-    <ClCompile Include="ddp_control1d.cpp">
-      <Filter>DDP\example_ddp\control_1d</Filter>
-    </ClCompile>
-    <ClCompile Include="ddp_pendulum.cpp">
-      <Filter>DDP\example_ddp\pendulum_control</Filter>
-    </ClCompile>
-    <ClCompile Include="ddp_pendulum_test.cpp">
-      <Filter>DDP\example_ddp\pendulum_control</Filter>
-    </ClCompile>
-    <ClCompile Include="ddp_control1d_test.cpp">
-      <Filter>DDP\example_ddp\control_1d</Filter>
-    </ClCompile>
-    <ClCompile Include="ddp_brachistochrone_test.cpp">
-      <Filter>DDP\example_ddp\brachistochrone</Filter>
-    </ClCompile>
-    <ClCompile Include="double_invert_pendulum.cpp">
-      <Filter>DDP\example_ddp\doubleInvertPendulum</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="DDP">
       <UniqueIdentifier>{14d825b8-cde3-4d7f-8e71-3745647c60e1}</UniqueIdentifier>
     </Filter>
@@ -37,9 +13,6 @@
     <Filter Include="DDP\graph_ddp_solver">
       <UniqueIdentifier>{e66a1716-98ce-4bf2-8364-d4c42ec4c5f5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DDP\state_ddp_solver">
-      <UniqueIdentifier>{fa194a8d-bcdb-403d-ae77-81d6e601c81b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DDP\example_ddp\control_1d">
       <UniqueIdentifier>{e9fc4631-d44a-43f4-94e6-4ba6ed8db2d6}</UniqueIdentifier>
     </Filter>
@@ -49,34 +22,63 @@
     <Filter Include="DDP\example_ddp\doubleInvertPendulum">
       <UniqueIdentifier>{7356ad6e-0207-4814-9c9e-9e7735151ecb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDP\control_ddp_solver">
+      <UniqueIdentifier>{fa194a8d-bcdb-403d-ae77-81d6e601c81b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ddp_solver.hpp">
-      <Filter>DDP\state_ddp_solver</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_brachistochrone.hpp">
+    <ClCompile Include="..\src\brachistochrone\ddp_brachistochrone.cpp">
       <Filter>DDP\example_ddp\brachistochrone</Filter>
-    </ClInclude>
-    <ClInclude Include="dpp_solver_impl.hpp">
-      <Filter>DDP\state_ddp_solver</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_control1d.hpp">
-      <Filter>DDP\example_ddp\control_1d</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_pendulum.hpp">
-      <Filter>DDP\example_ddp\pendulum_control</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_pendulum_test.hpp">
-      <Filter>DDP\example_ddp\pendulum_control</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_control1d_test.hpp">
-      <Filter>DDP\example_ddp\control_1d</Filter>
-    </ClInclude>
-    <ClInclude Include="ddp_brachistochrone_test.hpp">
+    </ClCompile>
+    <ClCompile Include="..\src\brachistochrone\ddp_brachistochrone_test.cpp">
       <Filter>DDP\example_ddp\brachistochrone</Filter>
-    </ClInclude>
-    <ClInclude Include="double_invert_pendulum.hpp">
+    </ClCompile>
+    <ClCompile Include="..\src\control1D\ddp_control1d.cpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\control1D\ddp_control1d_test.cpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pendulum\ddp_pendulum.cpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pendulum\ddp_pendulum_test.cpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\double_inverted_pendulum\double_invert_pendulum.cpp">
       <Filter>DDP\example_ddp\doubleInvertPendulum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>DDP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\brachistochrone\ddp_brachistochrone.hpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\brachistochrone\ddp_brachistochrone_test.hpp">
+      <Filter>DDP\example_ddp\brachistochrone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\control1D\ddp_control1d.hpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\control1D\ddp_control1d_test.hpp">
+      <Filter>DDP\example_ddp\control_1d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pendulum\ddp_pendulum.hpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pendulum\ddp_pendulum_test.hpp">
+      <Filter>DDP\example_ddp\pendulum_control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\double_inverted_pendulum\double_invert_pendulum.hpp">
+      <Filter>DDP\example_ddp\doubleInvertPendulum</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\deterministic_dp_control_solver\dpp_solver_impl.hpp">
+      <Filter>DDP\control_ddp_solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\deterministic_dp_control_solver\ddp_solver.hpp">
+      <Filter>DDP\control_ddp_solver</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

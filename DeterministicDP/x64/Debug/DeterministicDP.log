@@ -1,0 +1,9 @@
+﻿  ddp_brachistochrone_test.cpp
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(31): note: while compiling class template member function 'void ddp::solver<ddp::brachistochrone,int,float>::solve(void)'
+  c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\ddp_brachistochrone_test.cpp(21): note: see reference to function template instantiation 'void ddp::solver<ddp::brachistochrone,int,float>::solve(void)' being compiled
+  c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\ddp_brachistochrone_test.cpp(13): note: see reference to class template instantiation 'ddp::solver<ddp::brachistochrone,int,float>' being compiled
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(59): warning C4056: overflow in floating-point constant arithmetic
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  DeterministicDP.vcxproj -> C:\Users\howar\OneDrive\Documents\Visual Studio 2015\Projects\DynamicProgramming\DeterministicDP\x64\Debug\DeterministicDP.exe
+  DeterministicDP.vcxproj -> C:\Users\howar\OneDrive\Documents\Visual Studio 2015\Projects\DynamicProgramming\DeterministicDP\x64\Debug\DeterministicDP.pdb (Partial PDB)

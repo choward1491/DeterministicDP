@@ -1,12 +1,28 @@
-﻿  ddp_pendulum_test.cpp
+﻿  ddp_brachistochrone_test.cpp
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(31): note: while compiling class template member function 'void ddp::solver<ddp::brachistochrone>::solve(void)'
+  ddp_brachistochrone_test.cpp(18): note: see reference to function template instantiation 'void ddp::solver<ddp::brachistochrone>::solve(void)' being compiled
+  ddp_brachistochrone_test.cpp(12): note: see reference to class template instantiation 'ddp::solver<ddp::brachistochrone>' being compiled
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(59): warning C4056: overflow in floating-point constant arithmetic
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ddp_control1d_test.cpp
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(31): note: while compiling class template member function 'void ddp::solver<ddp::control1d>::solve(void)'
+  ddp_control1d_test.cpp(21): note: see reference to function template instantiation 'void ddp::solver<ddp::control1d>::solve(void)' being compiled
+  ddp_control1d_test.cpp(11): note: see reference to class template instantiation 'ddp::solver<ddp::control1d>' being compiled
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(59): warning C4056: overflow in floating-point constant arithmetic
+c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ddp_pendulum_test.cpp
 c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(31): note: while compiling class template member function 'void ddp::solver<ddp::pendulum>::solve(void)'
   ddp_pendulum_test.cpp(51): note: see reference to function template instantiation 'void ddp::solver<ddp::pendulum>::solve(void)' being compiled
   ddp_pendulum_test.cpp(14): note: see reference to class template instantiation 'ddp::solver<ddp::pendulum>' being compiled
 c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(59): warning C4056: overflow in floating-point constant arithmetic
 c:\users\howar\onedrive\documents\visual studio 2015\projects\dynamicprogramming\deterministicdp\deterministicdp\dpp_solver_impl.hpp(72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  double_invert_pendulum.cpp
+  main.cpp
   Generating code
-  3 of 359 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+  4 of 359 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
