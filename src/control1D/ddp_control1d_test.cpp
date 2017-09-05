@@ -1,9 +1,9 @@
 
 #include "ddp_control1d_test.hpp"
-#include "ddp_solver.hpp"
+#include "src/deterministic_dp_control_solver/ddp_solver.hpp"
 #include "ddp_control1d.hpp"
 
-typedef ddp::solver<ddp::control1d> c1d_ddp;
+/*typedef ddp::solver<ddp::control1d> c1d_ddp;
 
 void ddp::control1dTest()
 {
@@ -20,7 +20,7 @@ void ddp::control1dTest()
 
 	cddp.solve();
 	c1d_ddp::Policy & policy = cddp.getPolicy();
-	c1d_ddp::CostGraph & cg = cddp.getCostGraph();
+	//c1d_ddp::CostGraph & cg = cddp.getCostGraph();
 
 	int s_idx = Ns - 1;
 	printf("%lf\n", ddp_.getStateAt(s_idx));
@@ -30,3 +30,4 @@ void ddp::control1dTest()
 	}
 
 }
+*/

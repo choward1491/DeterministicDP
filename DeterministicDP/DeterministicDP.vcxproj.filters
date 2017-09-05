@@ -25,6 +25,9 @@
     <Filter Include="DDP\control_ddp_solver">
       <UniqueIdentifier>{fa194a8d-bcdb-403d-ae77-81d6e601c81b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DDP\example_ddp\alumni_challenge">
+      <UniqueIdentifier>{92c0e09b-9067-432c-a935-9e2f7da7db50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\brachistochrone\ddp_brachistochrone.cpp">
@@ -50,6 +53,15 @@
     </ClCompile>
     <ClCompile Include="..\src\main.cpp">
       <Filter>DDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\alumni_challenge\ddp_glider_dyn.cpp">
+      <Filter>DDP\example_ddp\alumni_challenge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\alumni_challenge\ddp_glider_training.cpp">
+      <Filter>DDP\example_ddp\alumni_challenge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\deterministic_dp_control_solver\ddp_abstract_dyn.cpp">
+      <Filter>DDP\control_ddp_solver</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +90,15 @@
       <Filter>DDP\control_ddp_solver</Filter>
     </ClInclude>
     <ClInclude Include="..\src\deterministic_dp_control_solver\ddp_solver.hpp">
+      <Filter>DDP\control_ddp_solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\alumni_challenge\ddp_glider_dyn.hpp">
+      <Filter>DDP\example_ddp\alumni_challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\alumni_challenge\ddp_glider_training.hpp">
+      <Filter>DDP\example_ddp\alumni_challenge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\deterministic_dp_control_solver\ddp_abstract_dyn.hpp">
       <Filter>DDP\control_ddp_solver</Filter>
     </ClInclude>
   </ItemGroup>

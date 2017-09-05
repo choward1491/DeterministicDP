@@ -26,7 +26,11 @@ namespace ddp {
 	class solver {
 	public:
 		// specify solver typedefs
+#ifdef USE_WHOLE_POLICY
 		typedef std::vector<std::vector<ctype>> Policy;
+#else
+		typedef std::vector<ctype> Policy;
+#endif
 		typedef ddp_def DDP;
 
 		// constructor

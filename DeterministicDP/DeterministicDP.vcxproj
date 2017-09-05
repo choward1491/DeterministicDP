@@ -19,20 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\alumni_challenge\ddp_glider_dyn.cpp" />
+    <ClCompile Include="..\src\alumni_challenge\ddp_glider_training.cpp" />
     <ClCompile Include="..\src\brachistochrone\ddp_brachistochrone.cpp" />
     <ClCompile Include="..\src\brachistochrone\ddp_brachistochrone_test.cpp" />
     <ClCompile Include="..\src\control1D\ddp_control1d.cpp" />
     <ClCompile Include="..\src\control1D\ddp_control1d_test.cpp" />
+    <ClCompile Include="..\src\deterministic_dp_control_solver\ddp_abstract_dyn.cpp" />
     <ClCompile Include="..\src\double_inverted_pendulum\double_invert_pendulum.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\pendulum\ddp_pendulum.cpp" />
     <ClCompile Include="..\src\pendulum\ddp_pendulum_test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\alumni_challenge\ddp_glider_dyn.hpp" />
+    <ClInclude Include="..\src\alumni_challenge\ddp_glider_training.hpp" />
     <ClInclude Include="..\src\brachistochrone\ddp_brachistochrone.hpp" />
     <ClInclude Include="..\src\brachistochrone\ddp_brachistochrone_test.hpp" />
     <ClInclude Include="..\src\control1D\ddp_control1d.hpp" />
     <ClInclude Include="..\src\control1D\ddp_control1d_test.hpp" />
+    <ClInclude Include="..\src\deterministic_dp_control_solver\ddp_abstract_dyn.hpp" />
     <ClInclude Include="..\src\deterministic_dp_control_solver\ddp_solver.hpp" />
     <ClInclude Include="..\src\deterministic_dp_control_solver\dpp_solver_impl.hpp" />
     <ClInclude Include="..\src\double_inverted_pendulum\double_invert_pendulum.hpp" />
@@ -92,6 +98,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(ProjectDir)..\;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)..\;</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -105,6 +114,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\;</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
